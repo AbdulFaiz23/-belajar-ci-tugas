@@ -42,5 +42,7 @@ $routes->get('/minuman', 'TransaksiController::minuman');
 $routes->get('/bumbu-dapur', 'TransaksiController::bumbuDapur');
 $routes->get('/alat-tulis', 'TransaksiController::alatTulis');
 
+$routes->get('profile', 'Home::profile', ['filter' => 'auth']);
 
+$routes->resource('api', ['controller' => 'apiController']);
 
